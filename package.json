@@ -1,5 +1,5 @@
 {
-    "name": "pipeline-graph",
+    "name": "jenkins-pipeline-graph-vue",
     "author": "Wang Rui",
     "version": "1.0.0",
     "description": "Jenkins-ci pipeline for vue.js",
