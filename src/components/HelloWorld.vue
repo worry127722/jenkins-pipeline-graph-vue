@@ -2,7 +2,7 @@
     <div class="hello">
         <h1>{{ msg }}</h1>
 
-        <PipelineGraph
+        <JenkinsPipelineGraphVue
             :stages='stage'
             :layout='layout'
         />
@@ -42,17 +42,17 @@
 
 <script>
     // import SvgSpinner from "./support/SvgSpinner";
-    import PipelineGraph from "./PipelineGraph";
-    import {nodeStrokeWidth} from "./support/StatusIcons.js";
-    import {Result} from "./PipelineGraphModel";
+    import JenkinsPipelineGraphVue from "./PipelineGraph";
+    // import {nodeStrokeWidth} from "./support/StatusIcons.js";
+    // import {Result} from "./PipelineGraphModel";
 
-    import '../assets/styles/css/main.css'
+    // import '../assets/styles/css/main.css'
 
     export default {
         name: 'HelloWorld',
         components: {
             // SvgSpinner,
-            PipelineGraph
+            JenkinsPipelineGraphVue
         },
         data() {
             return {
@@ -67,23 +67,23 @@
                     smallLabelOffsetV: 20,
                 },
                 stage: [{
-                    "name": "封版",
+                    "name": "流程1",
                     "children": [],
                     "state": "SUCCESS",
                     "completePercent": 50,
                     "id": 1587,
                     "type": "STAGE"
                 }, {
-                    "name": "灰度1前确认",
+                    "name": "流程",
                     "children": [{
-                        "name": "block问题确认",
+                        "name": "子流程",
                         "children": [],
                         "state": "SUCCESS",
                         "completePercent": 50,
                         "id": 1589,
                         "type": "PARALLEL"
                     }, {
-                        "name": "monkey测试",
+                        "name": "子流程",
                         "children": [],
                         "state": "SUCCESS",
                         "completePercent": 50,
@@ -95,58 +95,44 @@
                     "id": 1588,
                     "type": "STAGE"
                 }, {
-                    "name": "灰度1",
+                    "name": "流程",
                     "children": [],
                     "state": "SUCCESS",
                     "completePercent": 50,
                     "id": 1591,
                     "type": "STAGE"
                 }, {
-                    "name": "灰度2前确认",
-                    "children": [],
-                    "state": "SUCCESS",
-                    "completePercent": 50,
-                    "id": 1592,
-                    "type": "STAGE"
-                }, {
-                    "name": "灰度2",
-                    "children": [],
-                    "state": "SUCCESS",
-                    "completePercent": 50,
-                    "id": 1593,
-                    "type": "STAGE"
-                }, {
-                    "name": "提审",
+                    "name": "流程",
                     "children": [],
                     "state": "SUCCESS",
                     "completePercent": 50,
                     "id": 1594,
                     "type": "STAGE"
                 }, {
-                    "name": "上架前确认",
+                    "name": "流程",
                     "children": [],
                     "state": "PAUSED",
                     "completePercent": 50,
                     "id": 1595,
                     "type": "STAGE"
                 }, {
-                    "name": "上架",
+                    "name": "流程",
                     "children": [],
                     "state": "not_built",
                     "completePercent": 50,
                     "id": 1596,
                     "type": "STAGE"
                 }, {
-                    "name": "全量确认",
+                    "name": "流程",
                     "children": [{
-                        "name": "block问题确认",
+                        "name": "子流程",
                         "children": [],
                         "state": "not_built",
                         "completePercent": 50,
                         "id": 1598,
                         "type": "PARALLEL"
                     }, {
-                        "name": "核心数据确认",
+                        "name": "子流程",
                         "children": [],
                         "state": "not_built",
                         "completePercent": 50,
@@ -158,7 +144,7 @@
                     "id": 1597,
                     "type": "STAGE"
                 }, {
-                    "name": "全量放量",
+                    "name": "流程",
                     "children": [],
                     "state": "not_built",
                     "completePercent": 50,

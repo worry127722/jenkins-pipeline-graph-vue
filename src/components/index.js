@@ -1,2 +1,2 @@
-export {PipelineGraph} from './PipelineGraph';
-export {Result} from './PipelineGraphModel';
+import JenkinsPipelineGraphVue from './PipelineGraph';
+export default JenkinsPipelineGraphVue;

@@ -1,5 +1,5 @@
 import {Result} from '../PipelineGraphModel';
-import {SvgSpinner} from './SvgSpinner';
+import SvgSpinner from './SvgSpinner';
 import SvgStatus from './SvgStatus';
 
 export const nodeStrokeWidth = 3.5; // px.

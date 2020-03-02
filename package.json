@@ -41,11 +41,16 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/worry127722/pipeline-graph.git"
+        "url": "git+https://github.com/worry127722/jenkins-pipeline-graph-vue.git"
     },
     "browserslist": [
         "> 1%",
         "last 2 versions"
+    ],
+    "keywords": [
+        "jenkins",
+        "pipeline",
+        "vue"
     ],
     "license": "ISC",
     "bugs": {

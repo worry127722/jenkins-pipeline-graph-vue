@@ -5,7 +5,7 @@
     import {layoutGraph, sequentialStagesLabelOffset} from './PipelineGraphLayout.js';
 
     export default {
-        name: "pipeline-graph",
+        name: "jenkins-pipeline-graph-vue",
         components: {},
         data() {
             return {
@@ -578,6 +578,6 @@
         },
     };
 </script>
-<style>
-
+<style scoped>
+    @import '../assets/styles/css/main.css';
 </style>
