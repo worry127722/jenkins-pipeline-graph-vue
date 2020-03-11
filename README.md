@@ -12,13 +12,22 @@ npm i jenkins-pipeline-graph-vue
 ```
 import JenkinsPipelineGraphVue from "jenkins-pipeline-graph-vue";
 
-<JenkinsPipelineGraphVue  :stages='stage'  :layout='layout'/>
+<JenkinsPipelineGraphVue
+       :stages='stage'
+       :layout='layout'
+       :onNodeClick='nodeClick'
+       :selectedStage='selectedNode'
+/>
 ```
 
 ## 参数：
 layout：样式
 
 stages：节点信息
+
+onNodeClick：点击节点时调用，返回两个参数：displayName 、 id
+
+selectedStage：初始化选中节点
 
 ## 实例：
 ```

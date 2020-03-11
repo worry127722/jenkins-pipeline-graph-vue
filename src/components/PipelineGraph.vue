@@ -46,7 +46,8 @@
             };
             if (newState) {
                 // If we need to update the state, then we'll delay any layout changes
-                this.setState(newState, doLayoutIfNeeded);
+                // 记得修改这里
+                // this.setState(newState, doLayoutIfNeeded);
             } else {
                 doLayoutIfNeeded();
             }
@@ -486,7 +487,6 @@
                 const clickableProps = {};
                 if (node.isPlaceholder === false && node.stage.state !== 'skipped') {
                     clickableProps.cursor = 'pointer';
-                    clickableProps.onClick = () => this.nodeClicked(node);
                 }
                 // Add an invisible click/touch/mouseover target, coz the nodes are small and (more importantly)
                 // many are hollow.
@@ -495,7 +495,11 @@
                         r: nodeRadius + 2 * connectorStrokeWidth,
                         'fill-opacity': "0",
                         stroke: "none", ...clickableProps
-                    }, class: "PWGx-pipeline-node-hittarget"
+                    },
+                    class: "PWGx-pipeline-node-hittarget",
+                    on: {
+                        click: () => this.nodeClicked(node)
+                    }
                 })));
                 // Most of the nodes are in shared code, so they're rendered at 0,0. We transform with a <g> to position them
                 const groupProps = {
