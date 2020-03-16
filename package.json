@@ -1,7 +1,7 @@
 {
     "name": "jenkins-pipeline-graph-vue",
     "author": "Wang Rui",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Jenkins-ci pipeline for vue.js",
     "main": "src/components/index.js",
     "scripts": {

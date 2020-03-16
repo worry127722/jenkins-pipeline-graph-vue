@@ -45,6 +45,7 @@
                 }
             };
             if (newState) {
+                doLayoutIfNeeded();
                 // If we need to update the state, then we'll delay any layout changes
                 // 记得修改这里
                 // this.setState(newState, doLayoutIfNeeded);
@@ -57,6 +58,14 @@
         mounted() {
         },
         updated() {
+        },
+        watch: {
+            stages() {
+                this.stagesUpdated(this.stages);
+            },
+            selectedStage() {
+                this.selectedStage2 = this.selectedStage;
+            }
         },
         render: function (createElement) {
             const nodeColumns = this.nodeColumns;
