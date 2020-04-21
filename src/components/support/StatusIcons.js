@@ -1,6 +1,7 @@
 import {Result} from '../PipelineGraphModel';
 import SvgSpinner from './SvgSpinner';
 import SvgStatus from './SvgStatus';
+import SvgBlock from './SvgBlock';
 
 export const nodeStrokeWidth = 3.5; // px.
 // Returns the correct <g> element for the result / progress percent.
@@ -22,6 +23,10 @@ export function getGroupForResult(result, percentage, radius, createElement) {
             badResult(result);
             return createElement(SvgStatus, {props: {radius: radius, result: Result.unknown}});
     }
+}
+
+export function getBlockTarget(node, createElement) {
+    return createElement(SvgBlock, {props: {node: node}});
 }
 
 function badResult(x) {

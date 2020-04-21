@@ -38,7 +38,13 @@
                     "state": "SUCCESS",
                     "completePercent": 50,
                     "id": 1587,
-                    "type": "STAGE"
+                    "type": "STAGE",
+                    'popInfo': {
+                        title: '<发生Block事件>',
+                        msg: [ '已解决：12个', '未解决：3个' ],
+                        width: "101",
+                        height: "58",
+                    }
                 }, {
                     "name": "流程2",
                     "children": [{
@@ -54,7 +60,13 @@
                         "state": "SUCCESS",
                         "completePercent": 50,
                         "id": 1590,
-                        "type": "PARALLEL"
+                        "type": "PARALLEL",
+                        'popInfo': {
+                            title: '<发生lock事件>',
+                            msg: [ '已解决：1个', '未解决：4个' ],
+                            width: "101",
+                            height: "58",
+                        }
                     }],
                     "state": "SUCCESS",
                     "completePercent": 50,

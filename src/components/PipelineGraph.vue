@@ -1,5 +1,5 @@
 <script>
-    import {nodeStrokeWidth, getGroupForResult} from './support/StatusIcons.js';
+    import {nodeStrokeWidth, getGroupForResult, getBlockTarget} from './support/StatusIcons.js';
     import TruncatingLabel from './support/TruncatingLabel';
     import {decodeResultValue, defaultLayout,} from './PipelineGraphModel.js';
     import {layoutGraph, sequentialStagesLabelOffset} from './PipelineGraphLayout.js';
@@ -487,6 +487,11 @@
                     const {completePercent = 0, title, state} = node.stage;
                     const resultClean = decodeResultValue(state);
                     groupChildren.push(getGroupForResult(resultClean, completePercent, nodeRadius, createElement));
+                    // 增加 node节点 气泡提示
+                    if (node.stage && node.stage.popInfo) {
+                        groupChildren.push(getBlockTarget(node, createElement));
+
+                    }
                     if (title) {
                         groupChildren.push(createElement("title", null, title));
                     }
