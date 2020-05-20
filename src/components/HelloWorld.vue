@@ -40,8 +40,8 @@
                     "id": 1587,
                     "type": "STAGE",
                     'popInfo': {
-                        title: '<发生Block事件>',
-                        msg: [ '已解决：12个', '这里是显示其他内容的地方' ],
+                        title: '< 通知 >',
+                        msg: [ '重要内容', '经党委会研究决定，现任命王铁柱为中共河北省省委书记' ],
                         width: "101",
                         height: "120",
                     }
@@ -61,12 +61,12 @@
                         "completePercent": 50,
                         "id": 1590,
                         "type": "PARALLEL",
-                        'popInfo': {
-                            title: '< 通知 >',
-                            msg: [ '已解决：1个', '未解决：4个' ],
-                            width: "101",
-                            height: "120",
-                        }
+                        // 'popInfo': {
+                        //     title: '< 通知 >',
+                        //     msg: [ '已解决：1个', '未解决：4个' ],
+                        //     width: "101",
+                        //     height: "120",
+                        // }
                     }],
                     "state": "SUCCESS",
                     "completePercent": 50,
@@ -97,7 +97,7 @@
                         "type": "PARALLEL",
                         'popInfo': {
                             title: '< 公告 >',
-                            msg: [ '已解决：12个', '这里是显示其他内容的地方' ],
+                            msg: [ '已解决：12个', '经党委会研究决定，现任命王铁柱为中共河北省省委书记' ],
                             width: "101",
                             height: "120",
                         }
