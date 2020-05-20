@@ -41,9 +41,9 @@
                     "type": "STAGE",
                     'popInfo': {
                         title: '<发生Block事件>',
-                        msg: [ '已解决：12个', '未解决：3个' ],
+                        msg: [ '已解决：12个', '这里是显示其他内容的地方' ],
                         width: "101",
-                        height: "58",
+                        height: "120",
                     }
                 }, {
                     "name": "流程2",
@@ -53,7 +53,7 @@
                         "state": "SUCCESS",
                         "completePercent": 50,
                         "id": 1589,
-                        "type": "PARALLEL"
+                        "type": "PARALLEL",
                     }, {
                         "name": "子流程2-2",
                         "children": [],
@@ -62,10 +62,10 @@
                         "id": 1590,
                         "type": "PARALLEL",
                         'popInfo': {
-                            title: '<发生lock事件>',
+                            title: '< 通知 >',
                             msg: [ '已解决：1个', '未解决：4个' ],
                             width: "101",
-                            height: "58",
+                            height: "120",
                         }
                     }],
                     "state": "SUCCESS",
@@ -94,7 +94,13 @@
                         "state": "not_built",
                         "completePercent": 50,
                         "id": 1598,
-                        "type": "PARALLEL"
+                        "type": "PARALLEL",
+                        'popInfo': {
+                            title: '< 公告 >',
+                            msg: [ '已解决：12个', '这里是显示其他内容的地方' ],
+                            width: "101",
+                            height: "120",
+                        }
                     }, {
                         "name": "子流程5-2",
                         "children": [],
